@@ -24,7 +24,7 @@ This document defines the model labels used in `charts/` and how each model was 
 - `cnn`: Custom CNN trained from scratch on the CAPTCHA task, including all convolution blocks, embedding layer, and character heads.
 
 NOTE: `charts/transcription_accuracy.csv` is CAPTCHA transcription accuracy measured on the **probe/stress-test experiment images**, not on the original HF validation set. For pretrained-only rows with random/untrained heads, this is a sanity check and should not be interpreted as native OCR ability.
-
+----
 ## Task Setup
 
 All task-trained models predict a 5-character CAPTCHA string. Architecturally, the ViT/CLIP/DINO variants use a pretrained vision backbone plus one linear classification head per character position. Each head predicts one character class, and the five heads together produce the transcription.
